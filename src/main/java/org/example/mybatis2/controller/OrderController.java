@@ -18,6 +18,7 @@ public class OrderController {
     public String page(Model model) {
         model.addAttribute("members", orderService.findAllMembers());
         model.addAttribute("orders", orderService.findAllOrders());
+        model.addAttribute("membersWithOrders", orderService.findAllMembersWithOrders());
         return "order";
     }
 

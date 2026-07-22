@@ -30,5 +30,10 @@
         <p>${order}</p>
     </c:forEach>
 </section>
+<section>
+    <c:forEach items="${membersWithOrders}" var="member">
+        <p>${member}</p>
+    </c:forEach>
+</section>
 </body>
 </html>
