@@ -26,9 +26,7 @@
     <select id="search" resultType="org.example.mybatis2.entity.UserAccount">
         SELECT *
         FROM USERS
-        -- WHERE 1=1
         <where>
-            -- 패러미터 주입으로 넣으려고 하면 CONCAT 문자열 결합을 해줘야함
             <if test="name != null">
                 AND name LIKE CONCAT('%', #{name}, '%')
             </if>
