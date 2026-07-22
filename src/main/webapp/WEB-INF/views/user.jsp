@@ -11,7 +11,7 @@
     <form method="get" action="${searchUrl}">
         <input name="name" placeholder="이름 키워드 검색">
         <input name="city" placeholder="도시 키워드 검색">
-        <input name="minAge" placeholder="최소 연량 이상 검색" type="number">
+        <input name="minAge" placeholder="최소 연령 이상 검색" type="number">
         <button>검색</button>
     </form>
 </section>
