@@ -1,0 +1,13 @@
+package org.example.mybatis2.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.example.mybatis2.entity.UserAccount;
+
+import java.util.List;
+
+@Mapper
+public interface UserAccountMapper {
+
+    void create(UserAccount userAccount); // USERS
+    List<UserAccount> findAll();
+}
