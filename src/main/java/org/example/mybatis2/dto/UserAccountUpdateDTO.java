@@ -3,7 +3,7 @@ package org.example.mybatis2.dto;
 import org.example.mybatis2.entity.UserAccount;
 
 public record UserAccountUpdateDTO(
-        long id, String name, String email, int age, String city
+        long id, String name, String email, Integer age, String city
 ) {
     public UserAccount toEntity() {
         return UserAccount.builder()

@@ -53,10 +53,10 @@
     <update id="update">
         UPDATE USERS
         <set>
-            <if test="name != null">name = #{name},</if>
-            <if test="email != null">email = #{email},</if>
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="email != null and email != ''">email = #{email},</if>
             <if test="age != null">age = #{age},</if>
-            <if test="city != null">city = #{city},</if>
+            <if test="city != null and city != ''">city = #{city},</if>
         </set>
         WHERE id = #{id}
     </update>
