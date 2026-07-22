@@ -5,12 +5,12 @@
 <mapper namespace="org.example.mybatis2.mapper.UserAccountMapper">
     <insert id="create" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO USERS
-            (name, email, age, city)
+        (name, email, age, city)
         VALUES
-            (#{name}, #{email}, #{age}, #{city})
+        (#{name}, #{email}, #{age}, #{city})
     </insert>
     <!--  SELECT id, ... FROM USERS  -->
-    <select id="findAll" resultType="UserAccount">
+    <select id="findAll" resultType="org.example.mybatis2.entity.UserAccount">
         SELECT * FROM USERS
     </select>
 </mapper>
