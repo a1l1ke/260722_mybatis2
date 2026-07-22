@@ -13,5 +13,5 @@ import lombok.Setter;
 public class UserSearchDTO {
     private String name;
     private String city;
-    private int minAge;
+    private Integer minAge;
 }
