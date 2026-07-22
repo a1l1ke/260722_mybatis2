@@ -38,4 +38,26 @@
             </if>
         </where>
     </select>
+    <!--  step2-2  -->
+    <select id="findById" resultType="org.example.mybatis2.entity.UserAccount">
+        SELECT * FROM USERS WHERE id = #{id}
+    </select>
+    <!--    <update id="update">-->
+    <!--        UPDATE USERS-->
+    <!--        SET name = #{name},-->
+    <!--            email = #{email},-->
+    <!--            age = #{age},-->
+    <!--            city = #{city}-->
+    <!--        WHERE id = #{id}-->
+    <!--    </update>-->
+    <update id="update">
+        UPDATE USERS
+        <set>
+            <if test="name != null">name = #{name},</if>
+            <if test="email != null">email = #{email},</if>
+            <if test="age != null">age = #{age},</if>
+            <if test="city != null">city = #{city},</if>
+        </set>
+        WHERE id = #{id}
+    </update>
 </mapper>

@@ -14,4 +14,8 @@ public interface UserAccountMapper {
     List<UserAccount> findAll();
 
     List<UserAccount> search(UserSearchDTO dto);
+
+    UserAccount findById(Long id);
+
+    void update(UserAccount userAccount);
 }
