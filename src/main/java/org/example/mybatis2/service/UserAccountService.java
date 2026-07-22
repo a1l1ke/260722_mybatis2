@@ -2,6 +2,7 @@ package org.example.mybatis2.service;
 
 import lombok.RequiredArgsConstructor;
 import org.example.mybatis2.dto.UserAccountFormDTO;
+import org.example.mybatis2.dto.UserSearchDTO;
 import org.example.mybatis2.entity.UserAccount;
 import org.example.mybatis2.mapper.UserAccountMapper;
 import org.springframework.stereotype.Service;
@@ -19,5 +20,9 @@ public class UserAccountService {
 
     public List<UserAccount> findAll() {
         return userAccountMapper.findAll();
+    }
+
+    public List<UserAccount> search(UserSearchDTO dto) {
+        return userAccountMapper.search(dto);
     }
 }

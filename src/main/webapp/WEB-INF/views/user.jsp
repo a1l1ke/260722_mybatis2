@@ -7,6 +7,14 @@
 <body>
 <h1>User Account</h1>
 <section>
+    <c:url var="searchUrl" value="/users/search"/>
+    <form method="get" action="${searchUrl}">
+        <input name="name">
+        <input name="email">
+        <input name="minAge" type="number">
+    </form>
+</section>
+<section>
     <form method="post">
         <input name="name"><br>
         <input name="email"><br>

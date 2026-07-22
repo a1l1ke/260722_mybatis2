@@ -2,6 +2,7 @@ package org.example.mybatis2.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.example.mybatis2.dto.UserAccountFormDTO;
+import org.example.mybatis2.dto.UserSearchDTO;
 import org.example.mybatis2.service.UserAccountService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,5 +27,11 @@ public class UserAccountController {
     public String create(@ModelAttribute UserAccountFormDTO dto) {
         userAccountService.create(dto);
         return "redirect:/users";
+    }
+
+    @GetMapping("/search")
+    public String search(@ModelAttribute UserSearchDTO dto, Model model) {
+        model.addAttribute("users", userAccountService.search(dto));
+        return "user";
     }
 }
