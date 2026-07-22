@@ -23,24 +23,24 @@
         m.id AS member_id,
         m.name AS member_name,
         m.email AS member_email
-        FROM orders o
-        JOIN members m
+        FROM ORDERS o
+        JOIN MEMBERS m
         ON o.member_id = m.id
     </select>
 
     <select id="findAllMembers" resultType="org.example.mybatis2.entity.Member">
         SELECT
         *
-        FROM members m
+        FROM MEMBERS m
     </select>
 
     <insert id="insertMember" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO members(name, email)
+        INSERT INTO MEMBERS(name, email)
         VALUES(#{name}, #{email})
     </insert>
 
     <insert id="insertOrder" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO orders(product_name, member_id)
+        INSERT INTO ORDERS(product_name, member_id)
         VALUES(#{productName}, #{member.id})
     </insert>
 </mapper>

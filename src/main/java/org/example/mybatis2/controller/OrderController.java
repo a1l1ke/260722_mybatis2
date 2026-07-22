@@ -27,7 +27,7 @@ public class OrderController {
         return "redirect:/orders";
     }
 
-    @PostMapping("/")
+    @PostMapping
     public String insertOrder(@ModelAttribute Order order, @RequestParam Long memberId) {
         Member m = new Member();
         m.setId(memberId);
