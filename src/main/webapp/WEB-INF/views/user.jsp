@@ -9,9 +9,10 @@
 <section>
     <c:url var="searchUrl" value="/users/search"/>
     <form method="get" action="${searchUrl}">
-        <input name="name">
-        <input name="email">
-        <input name="minAge" type="number">
+        <input name="name" placeholder="이름 키워드 검색">
+        <input name="email" placeholder="이메일 키워드 검색">
+        <input name="minAge" placeholder="최소 연량 이상 검색" type="number">
+        <button>검색</button>
     </form>
 </section>
 <section>
