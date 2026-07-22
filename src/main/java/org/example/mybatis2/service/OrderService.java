@@ -15,19 +15,19 @@ public class OrderService {
 
     // 4개
     // insertMember, insertOrder, findAllOrders, findAllMembers
-    void insertMember(Member member) {
+    public void insertMember(Member member) {
         orderMapper.insertMember(member);
     }
 
-    void insertOrder(Order order) {
+    public void insertOrder(Order order) {
         orderMapper.insertOrder(order);
     }
 
-    List<Member> findAllMembers() {
+    public List<Member> findAllMembers() {
         return orderMapper.findAllMembers();
     }
 
-    List<Order> findAllOrders() {
+    public List<Order> findAllOrders() {
         return orderMapper.findAllOrders();
     }
 }
