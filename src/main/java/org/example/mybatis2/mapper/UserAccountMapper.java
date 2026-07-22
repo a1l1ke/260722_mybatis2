@@ -18,4 +18,8 @@ public interface UserAccountMapper {
     UserAccount findById(Long id);
 
     void update(UserAccount userAccount);
+
+    List<UserAccount> findAllSorted(String sort);
+
+    void deleteByIds(List<Long> ids);
 }

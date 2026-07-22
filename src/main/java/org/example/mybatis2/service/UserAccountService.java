@@ -34,4 +34,12 @@ public class UserAccountService {
     public void update(UserAccountUpdateDTO dto) {
         userAccountMapper.update(dto.toEntity());
     }
+
+    public List<UserAccount> findAllSorted(String sort) {
+        return userAccountMapper.findAllSorted(sort);
+    }
+
+    public void deleteByIds(List<Long> ids) {
+        userAccountMapper.deleteByIds(ids);
+    }
 }

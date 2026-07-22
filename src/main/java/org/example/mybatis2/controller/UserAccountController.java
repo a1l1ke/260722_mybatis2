@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/users")
 @RequiredArgsConstructor
@@ -48,5 +50,17 @@ public class UserAccountController {
     ) {
         userAccountService.update(dto);
         return "redirect:/users/%d".formatted(id);
+    }
+
+    @GetMapping("/sorted")
+    public String sorted(@RequestParam String sort, Model model) {
+        model.addAttribute("users", userAccountService.findAllSorted(sort));
+        return "user";
+    }
+
+    @PostMapping("/delete")
+    public String delete(@RequestParam List<Long> ids) {
+        userAccountService.deleteByIds(ids);
+        return "redirect:/users";
     }
 }
