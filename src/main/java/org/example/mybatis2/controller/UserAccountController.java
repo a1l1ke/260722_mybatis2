@@ -33,7 +33,7 @@ public class UserAccountController {
         return "user";
     }
 
-    @GetMapping("/${id}")
+    @GetMapping("/{id}")
     public String detail(
             @PathVariable Long id,
             Model model) {
@@ -41,7 +41,7 @@ public class UserAccountController {
         return "user-detail";
     }
 
-    @PostMapping("/${id}")
+    @PostMapping("/{id}")
     public String update(
             @PathVariable Long id,
             @ModelAttribute UserAccountUpdateDTO dto

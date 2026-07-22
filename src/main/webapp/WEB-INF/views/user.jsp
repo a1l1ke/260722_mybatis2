@@ -26,7 +26,10 @@
 </section>
 <section>
     <c:forEach items="${users}" var="user">
-        <p>${user.name} ${user.email} ${user.age} ${user.city}</p>
+        <p>
+                ${user.name} ${user.email} ${user.age} ${user.city}<br>
+            <a href="<c:url value="/users/${user.id}" />">자세히보기</a>
+        </p>
     </c:forEach>
 </section>
 </body>
