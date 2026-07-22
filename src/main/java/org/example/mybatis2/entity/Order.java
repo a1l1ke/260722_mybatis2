@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@ToString
 public class Order {
     private Long id;
     private String productName;
